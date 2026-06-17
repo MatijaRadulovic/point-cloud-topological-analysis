@@ -1,0 +1,16 @@
+# Core Mapper implementation
+numpy==2.4.6
+scipy==1.17.1
+networkx==3.6.1
+matplotlib==3.11.0
+scikit-learn==1.9.0   # DBSCAN, PCA
+gudhi==3.12.0         # Betti numbers of the Mapper complex
+trimesh==4.12.2       # load 3D horse meshes (Stage 4)
+
+# Notebook / interactivity
+ipywidgets==8.1.8     # sliders
+notebook==7.5.7
+nbformat==5.10.4
+
+# Tests
+pytest
