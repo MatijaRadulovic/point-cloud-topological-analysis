@@ -4,9 +4,9 @@ This project is an illustrative implementation of the **Mapper algorithm**, a me
 
 The implementation is based on the paper:
 
-**G. Singh, F. Mémoli, and G. Carlsson**,
-*Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition*,
-Eurographics Symposium on Point-Based Graphics, 2007, pp. 91–100.
+**G. Singh, F. Mémoli, and G. Carlsson**,  
+*Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition*,  
+Eurographics Symposium on Point-Based Graphics, 2007, pp. 91–100.  
 DOI: `10.2312/SPBG/SPBG07/091-100`
 
 The goal of the project is to demonstrate how a point cloud can be transformed into a graph or simplicial complex that captures important topological features of the data, such as connected components, loops, and higher-dimensional structures.
@@ -27,19 +27,13 @@ Each cluster becomes a node in the Mapper graph. Two nodes are connected if the 
 
 ## Mathematical Idea
 
-Let (X) be a finite point cloud and let
-
-[
-f : X \to \mathbb{R}^d
-]
-
-be a filter function.
+Let `X` be a finite point cloud and let `f: X -> R^d` be a filter function.
 
 The Mapper construction follows these steps:
 
-1. Compute the filter values (f(X)).
-2. Cover the image (f(X)) by overlapping sets.
-3. Pull each cover element back to the original data set using the inverse image (f^{-1}(U)).
+1. Compute the filter values `f(X)`.
+2. Cover the image `f(X)` by overlapping sets.
+3. Pull each cover element back to the original data set using the inverse image `f^{-1}(U)`.
 4. Cluster the points inside each inverse image.
 5. Create one node for each cluster.
 6. Connect two nodes if their clusters overlap in the original data.
@@ -79,6 +73,9 @@ The implementation can also convert the Mapper output into:
 
 * a NetworkX graph,
 * a GUDHI simplex tree,
+
+and compute:
+
 * Betti numbers of the Mapper complex.
 
 ---
@@ -360,7 +357,7 @@ pytest
 
 ---
 
-## Reference
+## References
 
 This project is based on:
 
@@ -374,11 +371,3 @@ This project is based on:
   doi       = {10.2312/SPBG/SPBG07/091-100}
 }
 ```
-
----
-
-## Authors
-
-This project was developed as part of a topology / topological data analysis course project.
-
-The code implements and demonstrates the Mapper algorithm, while the notebook explanations describe the mathematical motivation and interpretation of each step.
